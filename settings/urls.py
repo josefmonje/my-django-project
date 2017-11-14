@@ -16,6 +16,10 @@ Including another URLconf
 from django.conf.urls import url
 from django.contrib import admin
 
+from core.views import IndexView, RobotsTxt
+
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
+    url(r'^robots\.txt$', RobotsTxtView.as_view(), name='robots.txt'),
+    url(r'^$', IndexView.as_view(), name='index'),
 ]
