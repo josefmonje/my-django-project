@@ -16,7 +16,7 @@ Including another URLconf
 from django.conf.urls import url
 from django.contrib import admin
 
-from core.views import IndexView, RobotsTxt
+from core.views import IndexView, RobotsTxtView
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
