@@ -13,7 +13,7 @@ class Command(TemplateCommand):
 
     def handle(self, **options):
         app_name = options.pop('name')
-        target = 'apps/{0}'.format(app_name)
+        target = path.join(path.join(settings.BASE_DIR, 'apps'), app_name)
         top_dir = path.abspath(path.expanduser(target))
         try:
             makedirs(top_dir)
